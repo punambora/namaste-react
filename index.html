@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Namaste React</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 </head>
 <body>
-    <div id="root">Hello</div>
+    <div id="root"></div>
     <script>
-        let h2 = document.createElement("h2");
-        h2.innerHTML = "Hi I am writing in HTML file";
-        let root = document.getElementById('root');
-        root.appendChild(h2);
+        let h2 = React.createElement('h2', {id: 'cont'}, 'h2 content');
+        let root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(h2, root);
     </script>
 </body>
 </html>
