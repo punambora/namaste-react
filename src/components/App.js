@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom/client";
-import Header from "./src/components/Header";
-import Body from "./src/components/Body";
+import Header from "./Header";
+import Body from "./Body";
 
 const OrderAppComponent = () => {
   return (
