@@ -4,6 +4,7 @@ import { Body } from "./Body";
 import About from "./About";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import Contact from "./Contact";
+import Error from "./Error";
 
 const OrderAppComponent = () => {
   return (
@@ -18,6 +19,7 @@ let appRouter = createBrowserRouter([
   {
     path: "/",
     Component: OrderAppComponent,
+    errorElement: <Error />,
   },
   {
     path: "/about",
