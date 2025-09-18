@@ -9,7 +9,7 @@ const Error = () => {
       Error Page
       <div>Error Status: {err.statusText}</div>
       <div>Error Details: {err.data}</div>
-      <div>Error Stack: {err.error.stack}</div>
+      <div>Error Stack: {err?.error?.stack}</div>
     </div>
   );
 };
