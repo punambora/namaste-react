@@ -6,13 +6,17 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router";
 import Contact from "./Contact";
 import Error from "./Error";
 import RestaurantMenuCard from "./RestaurantMenuCard";
+import { Provider } from "react-redux";
+import appStore from "../utils/store";
 
 const OrderAppComponent = () => {
   return (
-    <div className="order-app">
-      <Header />
-      <Outlet />
-    </div>
+    <Provider store={appStore}>
+      <div className="order-app">
+        <Header />
+        <Outlet />
+      </div>
+    </Provider>
   );
 };
 
